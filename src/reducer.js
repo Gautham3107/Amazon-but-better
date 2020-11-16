@@ -14,6 +14,13 @@ export const reducer = (state,action) =>{
                 ...state,
                 basket: [...state.basket, action.item],
             };
+            
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user
+            };
+
         case "REMOVE_FROM_BASKET":
             const index = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id
