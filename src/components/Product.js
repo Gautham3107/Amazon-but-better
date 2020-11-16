@@ -4,7 +4,7 @@ import './Product.css';
 
 function Product({ id,title,image,rating,price }) {
     const [{basket},dispatch] = useStateValue();
-    console.log(basket);
+    //console.log(basket);
     const addToBasket = () =>{
         dispatch({
             type:"ADD_TO_BASKET",
@@ -17,7 +17,7 @@ function Product({ id,title,image,rating,price }) {
             },
         })
     }
-    
+    //console.log(item.price);
     return (
         <div className="product">
             <div className="product__info">
@@ -27,8 +27,8 @@ function Product({ id,title,image,rating,price }) {
                     <strong>{price}</strong>
                 </div>
                 <div className="product__rating">
-                <p> {"⭐".repeat(rating)}</p>
-            </div>
+                    <p> {"⭐".repeat(rating)}</p>
+                </div>
             </div>
 
             <img src={image} alt=""/>
@@ -36,6 +36,7 @@ function Product({ id,title,image,rating,price }) {
             <button onClick={addToBasket}>Add to Cart</button>
         </div>
     )
+    
 }
 
 export default Product
