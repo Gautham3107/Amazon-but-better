@@ -1,25 +1,39 @@
 import React from 'react';
+import { useStateValue } from '../StateProvider';
 import './Product.css';
 
-function Product() {
+function Product({ id,title,image,rating,price }) {
+    const [{basket},dispatch] = useStateValue();
+    console.log(basket);
+    const addToBasket = () =>{
+        dispatch({
+            type:"ADD_TO_BASKET",
+            item:{
+                id:id,
+                title:title,
+                image:image,
+                price:price,
+                rating:rating,
+            },
+        })
+    }
+    
     return (
         <div className="product">
             <div className="product__info">
-                <p>The Lean Startup</p>
+                <p>{title}</p>
                 <div className="product__price">
                     <small>$</small>
-                    <strong>19.99</strong>
+                    <strong>{price}</strong>
                 </div>
                 <div className="product__rating">
-                <p>🌟</p>
-                <p>🌟</p>
-                <p>🌟</p>
+                <p> {"⭐".repeat(rating)}</p>
             </div>
             </div>
 
-            <img src="https://388760.smushcdn.com/1732391/wp-content/uploads/2013/01/The-Lean-Startup-Ed-Capaldi-681x1024.jpg?lossy=0&strip=1&webp=1" alt=""/>
+            <img src={image} alt=""/>
 
-            <button>Add to Cart</button>
+            <button onClick={addToBasket}>Add to Cart</button>
         </div>
     )
 }
