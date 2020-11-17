@@ -64,6 +64,15 @@
     width: 100%;
     font-weight: 900;
     border-color: darkgray;
+    transition: 0.3s;
+}
+
+.login__registerButton:hover{
+    cursor: pointer;
+    background-color: #2e7daa;
+    color: white;
+    border-color: white;
+    transition: 0.3s;
 }
 .login__form > p{
     margin-top: 15px;

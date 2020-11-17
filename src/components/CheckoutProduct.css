@@ -16,6 +16,15 @@
     color: #111;
     padding: 10px;
     border-radius: 8px;
+    transition: 0.3s;
+}
+
+.checkoutProduct__info > button:hover{
+    cursor: pointer;
+    background-color: #2e7daa;
+    transition: 0.4s;
+    color: white;
+    border-color: white;
 }
 
 .checkoutProduct__image{
