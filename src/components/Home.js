@@ -38,7 +38,7 @@ function Home() {
                         title="Wildcraft SUPERMASK W95+ Reusable Outdoor Respirator 3P : SUBLIPRINT : BLK_TRIZI : L"
                         image="https://images-na.ssl-images-amazon.com/images/I/71aqQQRdbtL._UL1500_.jpg"
                         rating={3}
-                        price={9.90}
+                        price={9.99}
                     />
                     <Product 
                         id="721465"
